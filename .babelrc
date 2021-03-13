@@ -1,0 +1,4 @@
+{
+    "presets": [ [ "env", { "modules": false } ] ], // 貌似这里的modules为false才可以识别this，在浏览器环境中有用
+    "plugins": ["transform-remove-strict-mode"]
+  }

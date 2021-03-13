@@ -1,0 +1,131 @@
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <title>Eve Smart Robot</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style>
+    body {
+      font-family: 'Microsoft Yahei';
+      width: 500px;
+      min-height: 100px;
+    }
+
+    a {
+      margin-right: 10px;
+    }
+
+    input {
+      width: 200px;
+      height: 30px;
+      line-height: 20px;
+    }
+
+    .my-small-input {
+      width: 50px;
+      height: 20px;
+      line-height: 20px;
+      margin-right: 10px;
+    }
+
+    button {
+      font-size: 18px;
+      width: 120px;
+      height: 25px;
+    }
+
+    #msgtip {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="msgtip">选择功能开始操作</h1>
+  <h2>浏览器插件测试</h2>
+
+  <div>
+    <a href="#" data-source="wukongHome" id="toutiaoFetchNewUsers">拉新(从悟空首页)</a>
+    <br />
+    <a href="#" id="toutiaoFollowUserFromDb">从DB中主动关注新粉-></a>
+    <input id="fetch_toutiao_users_num" class="my-small-input" value="1" />
+    <br />
+    <a href="#" id="followMyFansAndSaveToDB">关注我的粉丝并存到库中</a>
+  </div>
+
+  <!-- <div>
+    <h3>拉新</h3>
+    <a href="#" data-source="all" id="toutiaoFetchNewUsers">拉新</a>
+    <a href="#" data-source="wukongHome" id="toutiaoFetchNewUsers">拉新(从悟空首页)</a>
+    <br/>
+    <a href="#" data-source="wendaRank" data-search="wukong" id="toutiaoFetchNewUsers">拉新（问答日榜,悟空搜索）</a>
+    <a href="#" data-source="wendaRank" data-search="toutiao" id="toutiaoFetchNewUsers">拉新（问答日榜,头条搜索）</a>
+    <br/>
+    <a href="#" data-source="relativeArticle" id="toutiaoFetchNewUsers">从我的文章相关推荐拉新</a>
+    
+    <h3>维新</h3>
+    <a href="#" id="toutiaoFetchNumNewUsersInDB">单击查询待关注用户</a>
+    <a href="#" id="toutiaoFetchNumLastFollowToday">单击今天额度已用数</a>
+
+    <br/>
+    
+    <a href="#" data-source="toutiaoHome" id="toutiaoVisitNewFollers">处理粉丝</a>
+    <a href="#" id="opt_current_fans_page_toutiao_normal">我关注的</a>
+    偏移量-><input id="toutiao_fans_num_offset" class="my-small-input" value="100" />
+    处理量-><input id="toutiao_fans_maxnum" class="my-small-input" value="100" />
+    <br/>
+    <a href="#" id="opt_tuotiao_sendmessageto_unfollowme">提醒关注者回关(当前页50)</a>
+    
+  </div>
+
+  <h2>头条</h2>
+  <div>
+    <a href="#" id="opt_clear_storage">清配置缓存</a>
+    <a href="#" id="open_all_tuotiao_article_and_comment">我的已登陆粉</a>
+    <a href="#" id="open_firstscreen_tuotiao_article_and_comment">已登陆首屏新粉</a>
+    <a href="#" id="praise_and_comment_from_user_article_comments">从最近3篇文章评论查看</a>
+    <a href="#" id="opt_tuotiao_pcff_from_curren_article">从当前页文章评论回馈评论者</a>
+    <a href="#" id="from_my_article_to_follow_authors">主动关注：从my文章开始</a>
+    <a href="#" id="opt_current_fans_page_toutiao">实力宠新粉点评赞</a>
+    
+    <a href="#" id="opt_onlyreplayfollow_toutiao">仅向新粉回关</a>
+    <a href="#" id="opt_noreplayfollow_but_praiseandcomment_toutiao">无法回关，向新粉致敬</a>
+    
+    <a href="#" id="opt_tuotiao_followuser_from_current_article">从当前文章开始关注点评赞</a>
+  </div>
+
+  <h2>工具</h2>
+  <div>
+    <a href="#" id="opt_clear_storage">清配置缓存</a>
+    <a href="#" id="opt_scrolltop_start">向上连续滚动开始</a>
+    <a href="#" id="opt_scrolltop_end">向上连续滚动结束</a>
+  </div>
+
+  <h2>测试</h2>
+  <div>
+    <a href="#" id="testInBg">在bg测试</a>
+    <a href="#" id="testSendMessageToCS">发消息给cs</a>
+  </div>
+  <br />
+  <br />
+
+  <div id="status"></div>
+  <div><label>LIVE ID:</label><input id="liveid_input" value="" /></div>
+  <div><label>OFFSET:</label><input id="offset_input" value="0" /></div>
+  <div><label>ROBOT NAME:</label><input id="rname_input" value="" /></div>
+  <button id="startbtn">批量模式</button><br /><br />
+  <button id="jianguan_btn">清粉</button><br />
+
+  <div><label>YouDaoID:</label><input id="ydid_input" value="1bd4c1910a68c848e384627a8957f6cc" /></div>
+  <div><label>NUM:</label><input id="ydnum_input" value="10000" /></div>
+  <button id="yd_btn">YouDaoLike</button><br /> -->
+
+
+  <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+  <script type="text/javascript" src="js/execute-async-function.js"></script>
+  <script type="text/javascript" src="js/chrome-extension-async.js"></script>
+  <script type="module" src="js/popup.js"></script>
+</body>
+
+</html>

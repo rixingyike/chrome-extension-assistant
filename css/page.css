@@ -1,0 +1,114 @@
+*{
+  font-family: Roboto, sans-serif;
+}
+html,
+body{
+  height: 228px;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+.fleft{
+  float: left;
+}
+.fright{
+  float: right;
+}
+.tab{
+  width: 250px;
+  height: 40px;
+  background-color: #fff;
+}
+.tab .item{
+  background-color: #cacfd2;
+  color: #686e71;
+  width: 50%;
+  height:40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+.tab .active{
+  background-color: #fff;
+}
+.content{}
+.content .item{
+  height: 147px;
+  overflow: scroll;
+}
+.content .item ul{
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 0;
+}
+.more-info{
+  color: #000;
+  display: block;
+  height: 14px;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: right;
+  margin-right: 10px;
+  margin-top: 60px;
+}
+.icon-help{
+  width: 14px;
+  height: 14px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-image: url("../image/icon-help.png");
+}
+.content .item ul li {
+  padding: 12px 12px 12px 30px;
+  font-size: 16px;
+  height: 16px;
+  line-height: 16px;
+  position: relative;
+  border-bottom: 1px solid #e6e7e9;
+}
+.content .item ul li.selected{
+}
+.content .item ul li.selected .icon{
+  position: absolute;
+  left: 6px;
+  top:15px;
+  background-image: url("../image/icon-done.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 18px;
+}
+.inject-btn{
+  background-color: #4f5b68;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+input.input{
+  width: 92%;
+  margin: 20px auto 0;
+  display: block;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+}
+
+.slide-transition {
+  transition: width .3s ease;
+  width: 18px;
+}
+.slide-enter, .slide-leave {
+  width:0px;
+}

@@ -1,0 +1,84 @@
+{
+	"manifest_version": 2,
+	"name": "Wemedia Smart Tool",
+	"description": "chrome插件助理",
+	"version": "2.0",
+	"browser_action": {
+		"default_icon": "image/icon.png",
+		"default_title": "启动页",
+		"default_popup": "popup.html"
+	},
+	"icons": {
+		"16": "image/icon.png",
+		"48": "image/icon.png",
+		"128": "image/icon.png"
+	},
+	"content_scripts": [
+		{
+			//"matches": ["http://*/*", "https://*/*"],
+			// "<all_urls>" 表示匹配所有地址
+			"matches": [
+				"<all_urls>"
+			],
+			// 多个JS按顺序注入
+			"js": [
+				"js/content-script.js"
+				,"js/jquery-1.8.3.js"
+				// ,"js/service.js"
+				// ,"js/tuotiao.js"
+				// "js/require.js",
+				,"js/content.js"
+			],
+			// JS的注入可以随便一点，但是CSS的注意就要千万小心了，因为一不小心就可能影响全局样式
+			"css": [
+				"css/custom.css"
+			],
+			// 代码注入的时间，可选值： "document_start", "document_end", or "document_idle"，最后一个表示页面空闲时，默认document_idle
+			"run_at": "document_start"
+		},
+		// 这里仅仅是为了演示content-script可以配置多个规则
+		{
+			"matches": [
+				"*://*/*.png",
+				"*://*/*.jpg",
+				"*://*/*.gif",
+				"*://*/*.bmp"
+			],
+			"js": [
+				"js/show-image-content-size.js"
+			]
+		}
+	],
+	"web_accessible_resources": [
+		"js/main.js"
+		,"js/my-script.js"
+		,"js/toutiao.js"
+		,"js/util.js"
+		,"js/service.js"
+		,"js/chrome-extension-async.js"
+		,"js/execute-async-function.js"
+	],
+	"permissions": [
+		"activeTab",
+		"*://*/",
+		"storage" // 插件本地存储
+		,
+		"tabs" // 标签
+		,
+		"http://*/*" // 可以通过executeScript或者insertCSS访问的网站
+		,
+		"https://*/*" // 可以通过executeScript或者insertCSS访问的网站
+		,
+		"<all_urls>",
+		"contextMenus" // 右键菜单
+		,
+		"notifications" // 通知
+		// ,"webRequest" // web请求
+		// ,"webRequestBlocking" // 阻塞式web请求
+	],
+	"background": {
+		"page": "background.html",
+		// "scripts": ["background.js"],
+		"persistent": false
+	}
+}

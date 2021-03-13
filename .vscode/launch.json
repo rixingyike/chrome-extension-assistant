@@ -1,0 +1,8 @@
+{
+    "type": "node",
+    "request": "launch",
+    "name": "Gulp buildAddr",
+    "program": "${workspaceRoot}/buildNew/node_modules/gulp/bin/gulp.js",
+    "cwd": "${workspaceRoot}/src/",
+    "args": []
+}
