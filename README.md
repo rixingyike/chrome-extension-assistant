@@ -91,6 +91,6 @@ npm install babel-core babel-preset-env gulp-babel@7 babel-core babel-plugin-tra
 
 ## 联系方式
 
-有问题请关注微信公众号“程序员LIYI”联系作者。
+有问题请关注微信公众号联系作者。
 
 ![](https://yishulun.com/images/ghqrcode.jpg)
